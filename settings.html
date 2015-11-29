@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>設定画面</title>
+<script>
+	function defaultFrozen(){
+		document.form1.frozen.value = "0";
+	};
+	function defaultHeat(){
+		document.form1.heat.value = "28";
+	};
+	function defaultFire(){
+		document.form1.fire.value = "100";
+	};
+	function defaultQuake(){
+		document.form1.quake.value = "??????";
+	}
+	function changeComplete(){
+		window.alert("設定を変更しました");
+	}
+</script>
+</head>
+<body>
+	<h1>テスト用設定画面</h1>
+	<h3>※最初に表示されているのはデフォルト値</h3>
+	<form name="form1" action="settings" method="get">
+	<table border="2">
+		<tr>
+			<td align="center">室温センサー</td>
+		</tr>
+		<tr>
+			<td>
+				<table width="350">
+					<tr align="center">
+						<td></td>
+						<td>閾値</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>凍結注意温度</td>
+						<td><input type="text" name="frozen" value="0" /></td>
+						<td><input type="button" name="defaultFro" value="初期値" onclick="defaultFrozen();" />
+					</tr>
+					<tr>
+						<td>熱中症注意温度</td>
+						<td><input type="text" name="heat" value="28" /></td>
+						<td><input type="button" name="defaultHe" value="初期値" onclick="defaultHeat();" />
+					<tr>
+					<tr>
+						<td>火事警報温度</td>
+						<td><input type="text" name="fire" value="100" /></td>
+						<td><input type="button" name="defaultFi" value="初期値" onclick="defaultFire();" />
+					<tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table border="2">
+		<tr>
+			<td align="center">加速度センサー</td>
+		</tr>
+		<tr>
+			<td>
+				<table width="350">
+					<tr align="center">
+						<td></td>
+						<td>閾値</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>揺れ検知　　　</td>
+						<td><input type="text" name="quake" value="??????" /></td>
+						<td><input type="button" name="defaultQu" value="初期値" onclick="defaultQuake();" />
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<input type="submit" value="設定を変更" onclick="changeComplete();" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <script src="./script/chart.js/Chart.js" charset="utf-8"></script>
+    <script src="./script/graph.js" charset="utf-8"></script>
+    <script src="./script/main.js" charset="utf-8"></script>    
+</head>
+    
+<body onload="init();">
+    <h2>現在の部屋の状態</h2>
+    <div class="box">
+        <canvas id="lineChart" height="500" width="500"></canvas>
+    </div>
+
+    <script>
+        setInterval('update(getThermo(),getAcc())',30000);
+    </script>
+    
+</body>
+    
+</html>
